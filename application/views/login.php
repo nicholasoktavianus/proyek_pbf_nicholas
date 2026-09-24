@@ -34,10 +34,6 @@
         <div class="login-body">
             <p class="msg">Masukkan Username dan Password</p>
 
-            <?php if ($this->session->flashdata('error')): ?>
-                <div class="alert alert-danger py-2 small"><?= $this->session->flashdata('error'); ?></div>
-            <?php endif; ?>
-
             <form action="<?= base_url('login/aksi_login'); ?>" method="POST">
                 <div class="input-group mb-3">
                     <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
@@ -59,7 +55,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <button type="submit" class="btn btn-login btn-block">LOGIN</button>
+                        <button type="submit" name="login" value="Login" class="btn btn-login btn-block">LOGIN</button>
                     </div>
                 </div>
             </form>

@@ -1,7 +1,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="A Day In My Life text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; SISPENDAKUR 2026</span>
                     </div>
                 </div>
             </footer>

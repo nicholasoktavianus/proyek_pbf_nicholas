@@ -1,18 +1,18 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Index extends CI_Controller{
 
     function __construct(){
         parent::__construct();
+
         if($this->session->userdata('status') != "login"){
             redirect(base_url("login"));
         }
     }
 
-    public function index()
-    {
+    function index(){
         $this->load->view('template/header');
+        // sidebar sudah ada di dalam template/header.php
         $this->load->view('dashboard');
         $this->load->view('template/footer');
     }

@@ -1,0 +1,25 @@
+CARA PASANG (proyek_pbf_nicholas)
+1. HAPUS dari proyek:
+   - ht.access  (root)                      -> diganti .htaccess
+   - header.php (root, salah tempat)
+   - application/views/login/ (folder lama v_login.php)
+2. SALIN semua isi folder ini ke proyek, pilih Replace/Timpa:
+   .htaccess                                -> root proyek (sejajar index.php)
+   application/controllers/Login.php
+   application/controllers/index.php        (huruf kecil, sesuai materi)
+   application/controllers/Dashboard.php
+   application/models/M_login.php
+   application/views/login.php
+   application/views/template/header.php
+   application/views/template/footer.php
+3. Jalankan sql/user_md5.sql di phpMyAdmin (password admin = 123, MD5).
+4. Buka http://localhost/proyek_pbf_nicholas/login
+
+KESALAHAN MATERI YANG SUDAH DIPERBAIKI
+1. Form action base_url('login') -> base_url('login/aksi_login')
+2. Tombol login di tag <a href="index.html"> -> <button type="submit" name="login" value="Login">
+3. Index memanggil template/sidebar (file tidak ada) -> dihapus, sidebar sudah di header.php
+4. Dashboard tanpa cek session -> ditambah cek status login
+5. base_url(peserta) tanpa tanda kutip -> base_url('peserta')
+6. Menu LAPORAN hasil copy: id collapseUtilities kembar dengan TRANSAKSI, <li> tidak ditutup -> id collapseLaporan + isi menu
+7. Nama user "Douglas McGee", gambar profil src="img/..", link logout login.html -> diperbaiki
